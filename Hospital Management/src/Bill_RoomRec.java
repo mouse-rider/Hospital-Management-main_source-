@@ -7,11 +7,14 @@ import java.util.Locale;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
+
 public class Bill_RoomRec extends javax.swing.JFrame {
     Connection con=null;    
     ResultSet rs=null;
     PreparedStatement pst=null;
-  
+    /**
+     * Creates new form Bill_RoomRecord
+     */
     public Bill_RoomRec() {
         initComponents();
         con= Connect.ConnectDB();
@@ -28,15 +31,18 @@ public class Bill_RoomRec extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
           }
     }
-   
+    /**
+     * Creates new form Bill_RoomRec
+     */
+    
+
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-
-        setBackground(new java.awt.Color(255, 255, 255));
 
         jScrollPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -132,12 +138,37 @@ public class Bill_RoomRec extends javax.swing.JFrame {
             frm.btnSave.setEnabled(false);
           }catch(Exception ex){
             JOptionPane.showMessageDialog(this,ex);
-        }        
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_jTable1MouseClicked
 
-  
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
-        
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Bill_RoomRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Bill_RoomRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Bill_RoomRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Bill_RoomRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Bill_RoomRec().setVisible(true);
